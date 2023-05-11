@@ -1,0 +1,31 @@
+.landing {
+    height: 100%;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: black;
+    background-position: bottom 0px left 80%;
+    background-image: url(/assets/images/mtg-hero.png);
+    background-repeat: no-repeat;
+    background-size: auto 90%;
+
+    .landing__headline {
+        width: 50%;
+    }
+
+    .landing__h1 {
+        font-size: 60px;
+    }
+
+    .landing__h2 {
+        font-size: 32px;
+    }
+
+    .landing__cta {
+        margin-top: 24px;
+    }
+
+
+
+}
