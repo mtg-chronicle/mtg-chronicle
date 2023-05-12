@@ -12,13 +12,15 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { LandingComponent } from './components/landing/landing.component';
 import { UpcomingComponent } from './components/upcoming/upcoming.component';
+import { StoriesComponent } from './components/stories/stories.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    UpcomingComponent
+    UpcomingComponent,
+    StoriesComponent
   ],
   imports: [
     BrowserModule,
