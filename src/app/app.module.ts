@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { LandingComponent } from './components/landing/landing.component';
 import { UpcomingComponent } from './components/upcoming/upcoming.component';
 import { StoriesComponent } from './components/stories/stories.component';
+import { SocialHubComponent } from './components/social-hub/social-hub.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { StoriesComponent } from './components/stories/stories.component';
     AppComponent,
     LandingComponent,
     UpcomingComponent,
-    StoriesComponent
+    StoriesComponent,
+    SocialHubComponent
   ],
   imports: [
     BrowserModule,
