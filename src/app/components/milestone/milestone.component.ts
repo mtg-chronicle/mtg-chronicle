@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Milestone } from 'src/app/shared/models/milestone.model';
 
 @Component({
   selector: 'mtg-milestone',
@@ -7,13 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MilestoneComponent implements OnInit {
   @Input()
-  year: string = '1900';
+  milestone: Milestone = new Milestone;
+
   @Input()
-  headline: string = '';
-  @Input()
-  story: string = '';
-  @Input()
-  imageSource: string = '';
+  isReverse: boolean = false;
 
   constructor() { }
 
