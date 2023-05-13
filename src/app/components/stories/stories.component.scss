@@ -8,10 +8,26 @@
 .stories__timeline {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: 32px;
     margin: 48px;
     background-image: url(/assets/images/timeline.jpg);
     background-position: center;
     background-repeat: repeat-y;
+
+
+    mtg-red-handle {
+        align-self: center;
+    }
+
+    mtg-milestone {
+        padding: 16px 0;
+        background-image: url(/assets/images/timeline.jpg);
+        background-position: center;
+        background-repeat: repeat-y;
+    }
+
+    mtg-milestone.milestone--alt {
+        background-color: #eee;
+    }
 }

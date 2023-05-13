@@ -11,8 +11,8 @@ export class MilestoneComponent implements OnInit {
   milestone: Milestone = new Milestone;
 
   @Input()
-  @HostBinding('class.milestone--flip')
-  isFlip: boolean = false;
+  @HostBinding('class.milestone--alt')
+  isAlt: boolean = false;
 
   constructor() { }
 

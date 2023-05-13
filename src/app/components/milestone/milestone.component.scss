@@ -1,15 +1,16 @@
 :host {
     display: flex;
     gap: 16px;
+    justify-content: center;
 }
 
-:host.milestone--flip {
+:host.milestone--alt {
     flex-direction: row-reverse;
 }
 
 .middle {
     margin: 16px;
-    margin-top: 40px;
+    align-self: center;
 }
 
 .left,
