@@ -1,1 +1,5 @@
 <div class="stories__banner"></div>
+<div class="stories__timeline">
+    <mtg-red-handle></mtg-red-handle>
+    <mtg-milestone *ngFor="let mil of milestones; index as i;" [milestone]="mil" [isReverse]="i%2==0"></mtg-milestone>
+</div>

@@ -4,3 +4,10 @@
     background-repeat: no-repeat;
     height: 240px;
 }
+
+.stories__timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
