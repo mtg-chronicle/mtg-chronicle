@@ -1,0 +1,31 @@
+:host {
+    display: flex;
+    gap: 16px;
+}
+
+.middle {
+    margin: 16px;
+    margin-top: 40px;
+}
+
+.left,
+.right {
+    width: 300px;
+}
+
+.left__year,
+.right__headline {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.left {
+    .left__year {
+        font-family: Georgia, serif;
+        font-style: italic;
+    }
+
+    .left__image {
+        width: 100%;
+    }
+}

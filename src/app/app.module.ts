@@ -17,6 +17,8 @@ import { LandingComponent } from './components/landing/landing.component';
 import { UpcomingComponent } from './components/upcoming/upcoming.component';
 import { StoriesComponent } from './components/stories/stories.component';
 import { SocialHubComponent } from './components/social-hub/social-hub.component';
+import { MilestoneComponent } from './components/milestone/milestone.component';
+import { RedHandleComponent } from './components/red-handle/red-handle.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { SocialHubComponent } from './components/social-hub/social-hub.component
     LandingComponent,
     UpcomingComponent,
     StoriesComponent,
-    SocialHubComponent
+    SocialHubComponent,
+    MilestoneComponent,
+    RedHandleComponent
   ],
   imports: [
     BrowserModule,
