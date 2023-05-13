@@ -18,19 +18,25 @@
     width: 300px;
 }
 
-.left__year,
-.right__headline {
-    font-size: 24px;
-    margin-bottom: 8px;
-}
+
 
 .left {
-    .left__year {
-        font-family: Georgia, serif;
-        font-style: italic;
-    }
 
     .left__image {
         width: 100%;
+    }
+}
+
+.right {
+    .right__year {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-size: 48px;
+
+    }
+
+    .right__headline {
+        font-size: 22px;
+        margin: 8px 0px;
     }
 }
