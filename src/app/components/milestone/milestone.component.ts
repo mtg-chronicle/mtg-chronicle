@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { Milestone } from 'src/app/shared/models/milestone.model';
 
 @Component({
@@ -11,7 +11,8 @@ export class MilestoneComponent implements OnInit {
   milestone: Milestone = new Milestone;
 
   @Input()
-  isReverse: boolean = false;
+  @HostBinding('class.milestone--flip')
+  isFlip: boolean = false;
 
   constructor() { }
 
