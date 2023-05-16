@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +20,7 @@ import { StoriesComponent } from './components/stories/stories.component';
 import { SocialHubComponent } from './components/social-hub/social-hub.component';
 import { MilestoneComponent } from './components/milestone/milestone.component';
 import { RedHandleComponent } from './components/red-handle/red-handle.component';
+import { ResponsiveDirective } from './directivs/responsive.directive';
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import { RedHandleComponent } from './components/red-handle/red-handle.component
     StoriesComponent,
     SocialHubComponent,
     MilestoneComponent,
-    RedHandleComponent
+    RedHandleComponent,
+    ResponsiveDirective
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { RedHandleComponent } from './components/red-handle/red-handle.component
     MatToolbarModule,
     MatButtonModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
