@@ -13,7 +13,7 @@
 <mat-sidenav-container class="sidenav__container">
 
   <mat-sidenav #sidenav mode="push" class="sidenav">
-    <mat-nav-list>
+    <mat-nav-list on-click="onListItemClick($event)">
       <a mat-list-item *ngFor="let nav of navlist" routerLink="{{nav.link}}">{{nav.page}}</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -51,7 +51,8 @@
         <div class="footer__content ">
           <div>Powered by Angular<mat-icon svgIcon="angular-solid" class="footer__shield"></mat-icon>
           </div>
-          <div>Built and Hosted by <a class="footer__page" href="https://mtg-chronicle.github.io/" target="_blank">GitHub Pages</a>
+          <div>Built and Hosted by <a class="footer__page" href="https://mtg-chronicle.github.io/"
+              target="_blank">GitHub Pages</a>
           </div>
         </div>
       </div>

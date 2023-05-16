@@ -1,6 +1,7 @@
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit, ViewChild } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
+import { MatSidenav } from '@angular/material/sidenav';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ResponsiveService } from './services/responsive.service';
 import { Viewsize } from './shared/models/viewsize.model';
@@ -12,6 +13,7 @@ import { Viewsize } from './shared/models/viewsize.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
   navlist = [
     { page: 'Milestones', link: '/stories' },
     { page: 'Famous Quotes', link: '/quotes' },
@@ -20,6 +22,9 @@ export class AppComponent implements OnInit {
   ];
 
   viewsize!: Viewsize;
+
+  @ViewChild('sidenav')
+  sidenav!: MatSidenav;
 
   constructor(
     private matIconRegistry: MatIconRegistry,
@@ -35,11 +40,18 @@ export class AppComponent implements OnInit {
     this.responsiveService.getViewsize().subscribe(viewsize => this.viewsize = viewsize);
   }
 
-
   @HostBinding('class')
   get viewsizeCategory(): string {
     return this.viewsize.category;
   }
 
+  onListItemClick(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    const listitem = target.closest('[mat-list-item]');
+
+    if (listitem) {
+      this.sidenav.close();
+    }
+  }
 
 }
