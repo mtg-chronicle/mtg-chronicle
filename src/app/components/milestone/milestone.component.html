@@ -1,7 +1,7 @@
 <div class="left">
     <img class="left__image" src={{milestone.imageSource}} [style.filter]='greyFilter' />
 </div>
-<div class="middle">
+<div class="middle" *ngIf="viewsize.match(viewsize.categories.default)">
     <mtg-red-handle></mtg-red-handle>
 </div>
 <div class="right">

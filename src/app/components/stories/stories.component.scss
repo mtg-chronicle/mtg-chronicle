@@ -27,3 +27,14 @@
         background-repeat: repeat-y;
     }
 }
+
+
+:host.viewsize--small {
+    .stories__timeline {
+        background-image: none;
+
+        mtg-milestone {
+            background-image: none;
+        }
+    }
+}
