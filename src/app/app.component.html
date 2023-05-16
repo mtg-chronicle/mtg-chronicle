@@ -1,19 +1,16 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" responsive>
   <mat-toolbar-row>
     <button mat-button routerLink="/">MTG CHRONICLE</button>
     <span class="toolbar__spacer"></span>
-    <button mat-button routerLink="/stories">Milestones</button>
-    <button mat-button routerLink="/quotes">Famous Quotes</button>
-    <button mat-button routerLink="/gallery">Gallery</button>
-    <button mat-button>About Us</button>
+    <span *ngIf="viewsize.match(viewsize.categories.default)" class="toolbar__links">
+      <button mat-button routerLink="/stories">Milestones</button>
+      <button mat-button routerLink="/quotes">Famous Quotes</button>
+      <button mat-button routerLink="/gallery">Gallery</button>
+      <button mat-button>About Us</button>
+    </span>
   </mat-toolbar-row>
 </mat-toolbar>
 <router-outlet></router-outlet>
-
-
-
-
-
 
 <footer class="footer">
   <div class="footer__element footer__brand">

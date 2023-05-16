@@ -92,3 +92,16 @@
         font-size: 14px;
     }
 }
+
+:host.viewsize--small {
+
+    .footer {
+        flex-direction: column;
+
+        .footer__copyright,
+        .footer__buildtool {
+            align-self: center;
+            text-align: center;
+        }
+    }
+}
