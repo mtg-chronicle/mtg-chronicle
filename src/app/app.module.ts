@@ -9,7 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,7 +44,9 @@ import { ResponsiveDirective } from './directivs/responsive.directive';
     MatButtonModule,
     MatInputModule,
     MatIconModule,
-    LayoutModule
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

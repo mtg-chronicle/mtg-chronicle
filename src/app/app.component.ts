@@ -12,7 +12,12 @@ import { Viewsize } from './shared/models/viewsize.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
+  navlist = [
+    { page: 'Milestones', link: '/stories' },
+    { page: 'Famous Quotes', link: '/quotes' },
+    { page: 'Gallery', link: '/gallery' },
+    { page: 'About Us', link: '/' }
+  ];
 
   viewsize!: Viewsize;
 
