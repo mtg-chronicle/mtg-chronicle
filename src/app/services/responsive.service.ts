@@ -2,6 +2,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, distinctUntilChanged } from 'rxjs/operators';
+import { Viewsize } from '../shared/models/viewsize.model';
 
 
 @Injectable({
@@ -9,7 +10,7 @@ import { map, distinctUntilChanged } from 'rxjs/operators';
 })
 export class ResponsiveService {
 
-  private viewsize$: Observable<string>;
+  private viewsize$: Observable<Viewsize>;
 
   constructor(
     private breakpointObserver: BreakpointObserver) {
@@ -18,13 +19,14 @@ export class ResponsiveService {
       Breakpoints.XSmall
     ]).pipe(
       map(result => {
-        return (result.matches) ? '' : 'small'
+        var sizeCate = (result.matches) ? Viewsize.SMALL : Viewsize.DEFAULT;
+        return new Viewsize(sizeCate);
       }),
       distinctUntilChanged()
     );
   }
 
-  getViewsize(): Observable<string> {
+  getViewsize(): Observable<Viewsize> {
     return this.viewsize$;
   }
 }
