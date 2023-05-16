@@ -14,9 +14,16 @@ export class MilestoneComponent implements OnInit {
   @HostBinding('class.milestone--alt')
   isAlt: boolean = false;
 
+  @Input()
+  greyscale: number = 0;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  get greyFilter(): string {
+    return `grayscale(${this.greyscale})`;
   }
 
 }
