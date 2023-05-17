@@ -3,32 +3,24 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 import { ResponsiveService } from 'src/app/services/responsive.service';
 import { Milestone } from 'src/app/shared/models/milestone.model';
 import { Viewsize } from 'src/app/shared/models/viewsize.model';
+import { ResponsiveComponent } from '../responsive/responsive.component';
 
 @Component({
   selector: 'mtg-stories',
   templateUrl: './stories.component.html',
   styleUrls: ['./stories.component.scss']
 })
-export class StoriesComponent implements OnInit {
+export class StoriesComponent extends ResponsiveComponent {
 
   milestones: Milestone[] = [];
-  viewsize!: Viewsize;
 
   constructor(
-    private responsiveService: ResponsiveService,
+    responsiveService: ResponsiveService,
     private http: HttpClient
   ) {
+    super(responsiveService);
     this.http.get<Milestone[]>('/assets/json/milestones.json')
       .subscribe(milestones => this.milestones = milestones);
-  }
-
-  ngOnInit(): void {
-    this.responsiveService.getViewsize().subscribe(viewsize => this.viewsize = viewsize);
-  }
-
-  @HostBinding('class')
-  get viewsizeCategory(): string {
-    return this.viewsize.category;
   }
 
 }

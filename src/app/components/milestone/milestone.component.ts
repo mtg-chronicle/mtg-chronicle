@@ -2,13 +2,14 @@ import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { ResponsiveService } from 'src/app/services/responsive.service';
 import { Milestone } from 'src/app/shared/models/milestone.model';
 import { Viewsize } from 'src/app/shared/models/viewsize.model';
+import { ResponsiveComponent } from '../responsive/responsive.component';
 
 @Component({
   selector: 'mtg-milestone',
   templateUrl: './milestone.component.html',
   styleUrls: ['./milestone.component.scss']
 })
-export class MilestoneComponent implements OnInit {
+export class MilestoneComponent extends ResponsiveComponent implements OnInit {
   @Input()
   milestone: Milestone = new Milestone;
 
@@ -19,13 +20,9 @@ export class MilestoneComponent implements OnInit {
   @Input()
   greyscale: number = 0;
 
-  viewsize!: Viewsize;
 
-  constructor(private responsiveService: ResponsiveService) {
-    this.responsiveService.getViewsize().subscribe(viewsize => this.viewsize = viewsize);
-  }
-
-  ngOnInit(): void {
+  constructor(responsiveService: ResponsiveService) {
+    super(responsiveService);
   }
 
   get greyFilter(): string {
