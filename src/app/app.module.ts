@@ -23,6 +23,7 @@ import { MilestoneComponent } from './components/milestone/milestone.component';
 import { RedHandleComponent } from './components/red-handle/red-handle.component';
 import { ResponsiveDirective } from './directivs/responsive.directive';
 import { ResponsiveComponent } from './components/responsive/responsive.component';
+import { QuotebookComponent } from './components/quotebook/quotebook.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ResponsiveComponent } from './components/responsive/responsive.componen
     MilestoneComponent,
     RedHandleComponent,
     ResponsiveDirective,
-    ResponsiveComponent
+    ResponsiveComponent,
+    QuotebookComponent
   ],
   imports: [
     BrowserModule,
