@@ -1,0 +1,11 @@
+:host {
+    display: flex;
+    margin: 16px;
+    gap: 16px;
+
+}
+
+:host.viewsize--small {
+    flex-direction: column;
+
+}

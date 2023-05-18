@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { RedHandleComponent } from './components/red-handle/red-handle.component
 import { ResponsiveDirective } from './directivs/responsive.directive';
 import { ResponsiveComponent } from './components/responsive/responsive.component';
 import { QuotebookComponent } from './components/quotebook/quotebook.component';
+import { QuoteComponent } from './components/quote/quote.component';
 
 
 @NgModule({
@@ -37,7 +39,8 @@ import { QuotebookComponent } from './components/quotebook/quotebook.component';
     RedHandleComponent,
     ResponsiveDirective,
     ResponsiveComponent,
-    QuotebookComponent
+    QuotebookComponent,
+    QuoteComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,8 @@ import { QuotebookComponent } from './components/quotebook/quotebook.component';
     MatIconModule,
     LayoutModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
