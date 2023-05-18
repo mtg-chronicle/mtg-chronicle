@@ -1,0 +1,17 @@
+<mat-card class="quote__card">
+    <picture mat-card-image class="quote__picture">
+        <img src="{{quote.backdrop}}" />
+        <div class="quote__overlay">
+            <div class="quote__statement">
+                {{quote.statement}}
+            </div>
+        </div>
+
+    </picture>
+
+
+    <mat-card-actions class="quote__actions" align="end">
+        <span class="quote__dash"></span>
+        <span class="quote__author">{{quote.author}}</span>
+    </mat-card-actions>
+</mat-card>

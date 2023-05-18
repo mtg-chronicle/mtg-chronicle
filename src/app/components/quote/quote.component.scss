@@ -1,0 +1,63 @@
+.quote__card {
+
+    .quote__picture {
+        position: relative;
+        margin-bottom: 0;
+
+        .quote__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Brush Script MT', cursive;
+
+            .quote__statement {
+                position: relative;
+                font-size: 4vw;
+                text-align: center;
+                text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+            }
+
+            .quote__statement::before {
+                position: absolute;
+                content: '“';
+                top: -50%;
+                right: 100%;
+            }
+
+            .quote__statement::after {
+                position: absolute;
+                content: '”';
+                top: 50%;
+                left: 100%;
+            }
+        }
+
+
+    }
+
+    .quote__actions {
+        align-items: center;
+
+        .quote__dash {
+            display: inline-block;
+            width: 4vw;
+            height: 0px;
+            margin: 8px;
+            line-height: 0px;
+            border-width: 1px;
+            border: 1px solid white;
+        }
+
+        .quote__author {
+            font-size: 4vw;
+            padding: 8px;
+            font-family: 'Brush Script MT', cursive;
+
+        }
+    }
+}
