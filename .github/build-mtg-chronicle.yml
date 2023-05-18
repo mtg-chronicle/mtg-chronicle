@@ -1,0 +1,27 @@
+name: build-mat-chronicle
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    branches: [main]
+jobs:
+  ng-build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout mat-chronicle
+        uses: actions/checkout@v2
+
+      - name: Setup node 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install npm package
+        run: npm install
+
+      - name: Install @angular/cli
+        run: npm install -g @angular/cli
+
+      - name: Build angular app
+        run: ng build
