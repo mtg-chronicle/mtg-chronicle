@@ -1,0 +1,45 @@
+name: build-mtg-chronicle
+env:
+  TOKEN_COMMIT: ${{ secrets.MTG_CHRONICLE_TOKEN }}
+  USER_NAME: mrbrique
+  USER_EMAIL: ${{ secrets.USER_EMAIL }}
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    branches: [main]
+jobs:
+  ng-build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout mtg-chronicle
+        uses: actions/checkout@v2
+
+      - name: Setup node 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install npm package
+        run: npm install
+
+      - name: Install @angular/cli
+        run: npm install -g @angular/cli
+
+      - name: Build angular app
+        run: ng build
+
+      - name: Commit to mtg-chronicle.github.io
+        run: |
+          cd ./dist/mtg-chronicle
+          git init -b main
+          git config --local user.name $USER_NAME
+          git config --local user.email $USER_EMAIL
+          echo local Git repository config completed
+          git status
+          git remote add origin https://$TOKEN_COMMIT@github.com/mtg-chronicle/mtg-chronicle.github.io.git
+          git checkout -b main
+          git add --all
+          git commit -m "Deploy to Github pages by build-mtg-chronicle"
+          git push origin main
