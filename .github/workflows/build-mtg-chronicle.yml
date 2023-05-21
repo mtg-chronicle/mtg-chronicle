@@ -40,7 +40,6 @@ jobs:
           git status
           git remote add origin https://$TOKEN_COMMIT@github.com/mtg-chronicle/mtg-chronicle.github.io.git
           git checkout -b main
-          git pull origin main 
           git add --all
           git commit -m "Deploy to Github pages by build-mtg-chronicle"
-          git push origin main
+          git push origin main -f
