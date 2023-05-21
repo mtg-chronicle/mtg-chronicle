@@ -40,24 +40,44 @@
 
     }
 
-    .quote__actions {
+    .quote__content {
+        display: flex;
+        justify-content: center;
         align-items: center;
+        margin-top: 16px;
 
         .quote__dash {
             display: inline-block;
             width: 4vw;
             height: 0px;
-            margin: 8px;
             line-height: 0px;
             border-width: 1px;
             border: 1px solid white;
         }
 
         .quote__author {
-            font-size: 4vw;
-            padding: 8px;
+            font-size: 3vw;
+            padding: 0px 8px;
             font-family: 'Brush Script MT', cursive;
 
+        }
+    }
+}
+
+
+:host.viewsize--small {
+    .quote__card {
+        .quote__overlay {
+            .quote__statement {
+                font-size: 7svw;
+            }
+
+        }
+
+        .quote__content {
+            .quote__author {
+                font-size: 5vw;
+            }
         }
     }
 }
