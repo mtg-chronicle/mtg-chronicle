@@ -26,6 +26,7 @@ import { ResponsiveDirective } from './directivs/responsive.directive';
 import { ResponsiveComponent } from './components/responsive/responsive.component';
 import { QuotebookComponent } from './components/quotebook/quotebook.component';
 import { QuoteComponent } from './components/quote/quote.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { QuoteComponent } from './components/quote/quote.component';
     ResponsiveDirective,
     ResponsiveComponent,
     QuotebookComponent,
-    QuoteComponent
+    QuoteComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
