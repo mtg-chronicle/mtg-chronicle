@@ -11,7 +11,7 @@
     background-size: auto 90%;
 
     .landing__headline {
-        width: 50%;
+        width: 60%;
     }
 
     .landing__h1 {
@@ -26,6 +26,14 @@
         margin-top: 24px;
     }
 
+}
 
+:host.viewsize--small {
+    .landing {
+        .landing__headline {
+            width: 100%;
+            text-align: center;
+        }
 
+    }
 }
