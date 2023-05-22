@@ -1,11 +1,21 @@
 :host {
-    display: flex;
-    margin: 16px;
-    gap: 16px;
+
+    .quotebook__banner {
+        background-image: url(/assets/images/quotes-banner.jpg);
+    }
+
+    .qoutebook__container {
+        display: flex;
+        margin: 16px;
+        gap: 16px;
+    }
 
 }
 
 :host.viewsize--small {
-    flex-direction: column;
+    .qoutebook__container {
+        flex-direction: column;
+
+    }
 
 }
