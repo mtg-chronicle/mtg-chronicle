@@ -1,3 +1,12 @@
-<span>
+<ng-container [ngSwitch]="viewsize.category">
+    <span *ngSwitchCase="viewsize.categories.small">
+        <ng-container [ngTemplateOutlet]="ngContent"></ng-container>
+    </span>
+
+    <span *ngSwitchCase="viewsize.categories.default" class="banner__caption"
+        [ngClass]="position==='right' ? 'banner__caption--right' : 'banner__caption--left' ">
+        <ng-container [ngTemplateOutlet]="ngContent"></ng-container> </span>
+</ng-container>
+<ng-template #ngContent>
     <ng-content></ng-content>
-</span>
+</ng-template>

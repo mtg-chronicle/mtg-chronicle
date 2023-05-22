@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ResponsiveComponent } from '../responsive/responsive.component';
+import { ResponsiveService } from 'src/app/services/responsive.service';
 
 @Component({
   selector: 'mtg-banner',
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss']
 })
-export class BannerComponent implements OnInit {
+export class BannerComponent extends ResponsiveComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  position: string = 'left';
 
-  ngOnInit(): void {
+  constructor(responsiveService: ResponsiveService) {
+    super(responsiveService);
   }
-
 }

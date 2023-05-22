@@ -3,11 +3,33 @@
     justify-content: center;
     align-items: center;
 
+    position: relative;
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 240px;
+    height: 360px;
     text-align: center;
     font-size: 3.5rem;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+
+    .banner__caption {
+        position: absolute;
+
+        top: 60%;
+        padding: 16px 32px;
+        background-color: #993333;
+    }
+
+    .banner__caption--left {
+        left: 0;
+    }
+
+    .banner__caption--right {
+        right: 0;
+    }
+}
+
+:host.viewsize--small {
+    height: 240px;
 }
