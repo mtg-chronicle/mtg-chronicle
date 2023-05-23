@@ -27,6 +27,7 @@ import { ResponsiveComponent } from './components/responsive/responsive.componen
 import { QuotebookComponent } from './components/quotebook/quotebook.component';
 import { QuoteComponent } from './components/quote/quote.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { BannerComponent } from './components/banner/banner.component';
     ResponsiveComponent,
     QuotebookComponent,
     QuoteComponent,
-    BannerComponent
+    BannerComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
