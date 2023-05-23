@@ -3,7 +3,9 @@
     <button mat-icon-button *ngIf="viewsize.match(viewsize.categories.small)" on-click="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <button mat-button routerLink="/">MTG CHRONICLE</button>
+    <button mat-button routerLink="/" class="landing__home">
+      <span class="landing__logo">MTG Chronicle</span>
+    </button>
     <span class="toolbar__spacer"></span>
     <span *ngIf="viewsize.match(viewsize.categories.default)" class="toolbar__links">
       <button mat-button *ngFor="let nav of navlist" routerLink="{{nav.link}}">{{nav.page}}</button>

@@ -16,7 +16,7 @@ export class AppComponent extends ResponsiveComponent {
     { page: 'Milestones', link: '/stories' },
     { page: 'Famous Quotes', link: '/quotes' },
     { page: 'Gallery', link: '/gallery' },
-    { page: 'About Us', link: '/' }
+    { page: 'About', link: '/' }
   ];
 
   @ViewChild('sidenav')
