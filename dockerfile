@@ -1,4 +1,4 @@
-FROM node:19-alpine
+FROM node:18.16.0-alpine3.16
 # install @angular/cli
 RUN npm install -g @angular/cli
 EXPOSE 4200
@@ -8,5 +8,5 @@ WORKDIR /ng-workspace
 COPY . .
 # install project dependency
 RUN npm install
-# start greenfall
+# ng serve
 CMD ["ng", "serve", "--host", "0.0.0.0", "--disable-host-check", "--hmr", "--poll", "2000"]
