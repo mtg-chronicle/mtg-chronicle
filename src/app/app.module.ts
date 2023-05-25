@@ -28,6 +28,7 @@ import { QuotebookComponent } from './components/quotebook/quotebook.component';
 import { QuoteComponent } from './components/quote/quote.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { AboutComponent } from './components/about/about.component';
+import { LogoComponent } from './components/logo/logo.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { AboutComponent } from './components/about/about.component';
     QuotebookComponent,
     QuoteComponent,
     BannerComponent,
-    AboutComponent
+    AboutComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
