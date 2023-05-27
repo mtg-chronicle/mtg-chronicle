@@ -1,1 +1,61 @@
-<p>about works!</p>
+<mtg-banner class="about__banner" position="right">About</mtg-banner>
+<div class="about__layout">
+    <div class="about__ceo"></div>
+    <div class="about__bio">
+        <div class="about__name">George Lam</div>
+        <div class="about__position">Fonuder & CEO</div>
+        <div class="about__profile">George Lam, the visionary CEO of our tech company founded in 1994, has a deep
+            personal interest in
+            technology and its potential to improve healthcare outcomes. Beyond his professional pursuits, George is an
+            avid learner and enjoys expanding his knowledge through various means. One of his favorite pastimes is
+            listening to audiobooks, and he's particularly fond of listening to them at double speed, allowing him to
+            absorb information more efficiently. This passion for continuous learning and optimization extends beyond
+            the confines of our organization, driving George to seek innovative solutions and push the boundaries of
+            what is possible in healthcare technology.
+        </div>
+    </div>
+    <div class="about__mtgc">About MTG Chronicle</div>
+
+    <mat-card class="mtgc__card">
+        <mat-card-header>
+            <mat-card-title class="mtgc__title"><mtg-logo></mtg-logo>
+            </mat-card-title>
+            <mat-card-subtitle>
+                MTG Chronicle is a website that takes you on a journey through the rich history and notable
+                milestones of our tech company. Discover our origins, witness the evolution of our solutions, and
+                explore
+                the achievements that define our success. Experience our visionary insights, explore our gallery of
+                accomplishments, and join our vibrant community of tech enthusiasts. Visit MTG Chronicle today to
+                immerse
+                yourself in our company's legacy and be inspired by our remarkable journey.
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+
+            <mat-list>
+                <mat-divider></mat-divider>
+
+                <mat-list-item>
+                    <mat-icon mat-list-icon>new_releases</mat-icon>
+                    <div mat-line>Version</div>
+                    <div mat-line>{{appService.context.version}} (Technical Preview)</div>
+
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <mat-icon mat-list-icon>architecture</mat-icon>
+                    <div mat-line>Developers</div>
+                    <a mat-line href="https://github.com/orgs/mtg-chronicle/people"
+                        target="_blank">https://github.com/orgs/mtg-chronicle/people</a>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <mat-icon mat-list-icon>bug_report</mat-icon>
+                    <a mat-line href="https://github.com/mtg-chronicle/mtg-chronicle/issues" target="_blank">Report an
+                        Issue</a>
+                </mat-list-item>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+
+</div>

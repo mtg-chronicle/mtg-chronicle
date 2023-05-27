@@ -1,0 +1,67 @@
+:host {
+    .about__banner {
+        background-image: url(/assets/images/landscape.jpg);
+
+    }
+
+    .about__layout {
+        display: grid;
+        grid-template-columns: 2fr 5fr 2fr;
+        grid-template-areas:
+            "ceo bio ."
+            "mtgc mtgc ."
+            "card card .";
+        grid-column-gap: 16px;
+        margin: 32px;
+
+        .about__ceo {
+            grid-area: ceo;
+            width: 320px;
+            height: 380px;
+            background-position: center;
+            background-image: url(/assets/images/mtg-ceo.jpg);
+            background-size: cover;
+
+        }
+
+        .about__bio {
+            grid-area: bio;
+
+            .about__name {
+                font-size: 32px;
+            }
+
+            .about__profile {
+                padding-top: 16px;
+            }
+        }
+
+        .about__mtgc {
+            grid-area: mtgc;
+            margin: 40px 0 24px 0;
+            font-size: 32px;
+        }
+
+        .mtgc__card {
+            grid-area: card;
+
+            .mtgc__title {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
+
+
+:host.viewsize--small {
+    .about__layout {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "ceo"
+            "bio"
+            "mtgc"
+            "card";
+    }
+}
