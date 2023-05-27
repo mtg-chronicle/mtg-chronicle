@@ -30,6 +30,11 @@ jobs:
       - name: Build angular app
         run: ng build
 
+      - name: duplicate 404.html from index.html
+        run: |
+          cd ./dist/mtg-chronicle
+          cp index.html 404.html
+
       - name: Commit to mtg-chronicle.github.io
         run: |
           cd ./dist/mtg-chronicle
