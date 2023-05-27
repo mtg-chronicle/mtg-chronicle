@@ -8,7 +8,8 @@
     </button>
     <span class="toolbar__spacer"></span>
     <span *ngIf="viewsize.match(viewsize.categories.default)" class="toolbar__links">
-      <button mat-button *ngFor="let nav of navlist" routerLink="{{nav.link}}">{{nav.page}}</button>
+      <button mat-button *ngFor="let nav of navlist" routerLink="{{nav.link}}" routerLinkActive
+        #routerLink="routerLinkActive" [color]="routerLink.isActive?'accent':''">{{nav.page}}</button>
     </span>
   </mat-toolbar-row>
 </mat-toolbar>
@@ -16,7 +17,7 @@
 
   <mat-sidenav #sidenav mode="push" class="sidenav">
     <mat-nav-list on-click="onListItemClick($event)">
-      <a mat-list-item *ngFor="let nav of navlist" routerLink="{{nav.link}}">{{nav.page}}</a>
+      <a mat-list-item *ngFor="let nav of navlist" routerLink="{{nav.link}}" routerLinkActive="navlist--active">{{nav.page}}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
