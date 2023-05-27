@@ -20,21 +20,10 @@
                 font-size: 4vw;
                 text-align: center;
                 text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+                background-color: rgba(0, 0, 0, 0.2);
+                color: white;
             }
 
-            .quote__statement::before {
-                position: absolute;
-                content: '“';
-                top: -50%;
-                right: 100%;
-            }
-
-            .quote__statement::after {
-                position: absolute;
-                content: '”';
-                top: 50%;
-                left: 100%;
-            }
         }
 
 
@@ -52,7 +41,7 @@
             height: 0px;
             line-height: 0px;
             border-width: 1px;
-            border: 1px solid white;
+            border: 1px solid black;
         }
 
         .quote__author {
