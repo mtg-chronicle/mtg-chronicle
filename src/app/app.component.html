@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" responsive>
+<mat-toolbar color="primary" class="toolbar" responsive>
   <mat-toolbar-row>
     <button mat-icon-button *ngIf="viewsize.match(viewsize.categories.small)" on-click="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
@@ -17,7 +17,8 @@
 
   <mat-sidenav #sidenav mode="push" class="sidenav">
     <mat-nav-list on-click="onListItemClick($event)">
-      <a mat-list-item *ngFor="let nav of navlist" routerLink="{{nav.link}}" routerLinkActive="navlist--active">{{nav.page}}</a>
+      <a mat-list-item *ngFor="let nav of navlist" routerLink="{{nav.link}}"
+        routerLinkActive="navlist--active">{{nav.page}}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
