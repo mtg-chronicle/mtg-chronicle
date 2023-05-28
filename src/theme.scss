@@ -1,0 +1,21 @@
+@use '@angular/material' as mat;
+@use 'app/components/banner/banner.component-theme' as banner;
+@include mat.core();
+
+
+$mtg-primary: mat.define-palette(mat.$grey-palette, 50, 300, 600);
+$mtg-accent: mat.define-palette(mat.$red-palette, 900);
+
+$mtg-light-theme: mat.define-light-theme((color: (primary: $mtg-primary,
+                accent: $mtg-accent )));
+
+@include mat.core-theme($mtg-light-theme);
+@include mat.toolbar-theme($mtg-light-theme);
+@include mat.button-theme($mtg-light-theme);
+@include mat.card-theme($mtg-light-theme);
+@include mat.list-theme($mtg-light-theme);
+@include mat.divider-theme($mtg-light-theme);
+@include mat.sidenav-theme($mtg-light-theme);
+
+
+@include banner.theme($mtg-light-theme);
