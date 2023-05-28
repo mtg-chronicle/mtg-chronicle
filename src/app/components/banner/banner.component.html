@@ -1,5 +1,6 @@
+<div class="banner__backdrop" [style.backgroundImage]="backgroundImage"></div>
 <ng-container [ngSwitch]="viewsize.category">
-    <span *ngSwitchCase="viewsize.categories.small">
+    <span *ngSwitchCase="viewsize.categories.small" class="banner__caption--centered">
         <ng-container [ngTemplateOutlet]="ngContent"></ng-container>
     </span>
 
@@ -7,6 +8,7 @@
         [ngClass]="position==='right' ? 'banner__caption--right' : 'banner__caption--left' ">
         <ng-container [ngTemplateOutlet]="ngContent"></ng-container> </span>
 </ng-container>
+
 <ng-template #ngContent>
     <ng-content></ng-content>
 </ng-template>

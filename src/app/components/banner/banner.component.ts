@@ -12,7 +12,14 @@ export class BannerComponent extends ResponsiveComponent implements OnInit {
   @Input()
   position: string = 'left';
 
+  @Input()
+  backdrop: string = '';
+
   constructor(responsiveService: ResponsiveService) {
     super(responsiveService);
+  }
+
+  get backgroundImage(): string {
+    return `url(${this.backdrop})`;
   }
 }

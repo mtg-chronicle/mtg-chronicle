@@ -1,4 +1,4 @@
-<mtg-banner class="stories__banner">MILESTONES</mtg-banner>
+<mtg-banner class="stories__banner" backdrop="/assets/images/mountain-road.jpg">MILESTONES</mtg-banner>
 <div class="stories__timeline">
     <mtg-red-handle *ngIf="viewsize.match(viewsize.categories.default)"></mtg-red-handle>
     <mtg-milestone responsive *ngFor="let mil of milestones; index as i;" [milestone]="mil" [isAlt]="i%2==0"
