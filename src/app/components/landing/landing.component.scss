@@ -33,6 +33,15 @@
         .landing__headline {
             width: 100%;
             text-align: center;
+
+            .landing__h1 {
+                font-size: 12vw;
+                padding-bottom: 16px;
+            }
+
+            .landing__h2 {
+                font-size: 6vw;
+            }
         }
 
     }
