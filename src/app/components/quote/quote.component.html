@@ -2,7 +2,7 @@
     <picture mat-card-image class="quote__picture">
         <img src="{{quote.backdrop}}" />
         <div class="quote__overlay">
-            <div class="quote__statement">
+            <div class="quote__statement {{quote.long ? 'long' : ''}}">
                 “{{quote.statement}}”
             </div>
         </div>

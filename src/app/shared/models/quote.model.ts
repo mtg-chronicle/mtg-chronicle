@@ -4,5 +4,7 @@ export class Quote {
 
     author: string = '';
 
+    long: boolean = false;
+
     backdrop: string = '';
 }
