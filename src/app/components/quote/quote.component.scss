@@ -58,6 +58,7 @@
 
 :host.viewsize--small {
     .quote__card {
+        min-width: inherit;
         .quote__overlay {
             .quote__statement {
                 font-size: 7svw;
